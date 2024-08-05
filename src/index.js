@@ -1,8 +1,8 @@
 /*
  * Example showcasing real-time, partial data updates to Polar Heatmap.
  */
-const lcjs = require('@arction/lcjs')
-const xydata = require('@arction/xydata')
+const lcjs = require('@lightningchart/lcjs')
+const xydata = require('@lightningchart/xydata')
 const { lightningChart, Themes, LUT, PalettedFill, regularColorSteps, SolidFill } = lcjs
 const { createWaterDropDataGenerator } = xydata
 
@@ -42,7 +42,6 @@ createWaterDropDataGenerator()
     .then((data) => {
         const palette = new PalettedFill({
             lut: new LUT({
-                units: 'intensity',
                 steps: regularColorSteps(0, 60, themeExamples.intensityColorPalette),
                 interpolate: true,
             }),
