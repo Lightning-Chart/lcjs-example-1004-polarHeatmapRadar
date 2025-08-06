@@ -12,6 +12,7 @@ const resolutionAnnuli = 200
 const polarChart = lightningChart({
             resourcesBaseUrl: new URL(document.head.baseURI).origin + new URL(document.head.baseURI).pathname + 'resources/',
         }).Polar({
+    legend: { visible: false },
     theme: Themes[new URLSearchParams(window.location.search).get('theme') || 'darkGold'] || undefined,
 })
 const polarHeatmap = polarChart
